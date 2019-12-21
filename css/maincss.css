@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+
+/*
+    General CSS
+*/
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #fff;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+a {
+    color: #383a4d;
+}
+a:hover {
+    transition: all .28s ease;
+    text-decoration: none;
+    color: #ef5753;
+}
+/*
+    General CSS --- END
+*/
+
+/*
+    Navbar CSS
+*/
+.navbar {
+    -webkit-box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2);
+    box-shadow: 0px 0px 15px 1px rgba(69, 65, 78, 0.2);
+    background: #fff;
+}
+.navbar-brand strong {
+    color: #333;
+}
+#searchform {
+    z-index: 1030;
+}
+#searchform input[type="search"] {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 0px;
+    text-align: center;
+}
+#searchform button {
+    border-radius: 0px;
+}
+#searchform input[type="search"]::-webkit-input-placeholder { color: #d8d8d8; }  /* WebKit, Blink, Edge */
+#searchform input[type="search"]:-moz-placeholder { color: #d8d8d8; }  /* Mozilla Firefox 4 to 18 */
+#searchform input[type="search"]::-moz-placeholder { color: #d8d8d8; }  /* Mozilla Firefox 19+ */
+#searchform input[type="search"]:-ms-input-placeholder { color: #d8d8d8; }  /* Internet Explorer 10-11 */
+#searchform input[type="search"]::-ms-input-placeholder { color: #d8d8d8; }  /* Microsoft Edge */
+.sidebarNav {
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transition: 0.5s;
+    padding-top: 20px;
+    overflow: hidden;
+}
+.sidebarNav ul {
+    list-style: none;
+    text-align: center;
+    padding:0px;
+}
+.sidebarNav ul li {
+    display: inline-block;
+    padding-bottom:5px;
+}
+.sidebarNav ul li.active a {
+    border-bottom: 2px solid #ef5753;
+    display: inline-block;
+}
+.sidebarNav ul li a {
+    padding: 0px;
+}
+.sidebarNav ul li a:hover {
+    background-color: initial;
+}
+.sidebarNav ul li ul.dropdown-menu {
+    transform: translate3d(10px, 30px, 0px) !important;
+}
+.sidebarNav ul li ul.dropdown-menu li {
+    padding-bottom: 5px;
+}
+.sidebarNavul li ul.dropdown-menu li a:hover {
+    color: #ef5753;
+}
+/*
+    Navbar CSS --- END
+*/
+
+/*
+    Post CSS
+*/
+.post .title h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.post .title h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.post .title h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.post .description ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    list-style: none;
+}
+.post .description ul li {
+    margin: 1em;
+    margin-left: 3em;
+}
+.post .description ul li::before {
+    content: '\f006';
+    font-family: 'FontAwesome';
+    float: left;
+    margin-left: -1.5em;
+    color: #0074D9;
+}
+.post .description blockquote {
+    display: block;
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: #eee;
+    padding: 1.5em 0 0.5em;
+    margin: 1.5em 0;
+    position: relative;
+}
+.post .description blockquote:before {
+    content: '\201C';
+    position: absolute;
+    top: 0em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 3rem;
+    height: 2rem;
+    font: 6em/1.08em 'PT Sans', sans-serif;
+    color: #666;
+    text-align: center;
+}
+.post .description blockquote:after {
+    content: "\2013 \2003" attr(cite);
+    display: block;
+    text-align: right;
+    font-size: 0.875em;
+    color: #e74c3c;
+}
+.post .date {
+    font-size: 0.8rem;
+}
+.post .footer {
+    color: #888;
+    font-size: 13px;
+}
+.post .footer span {
+    font-weight: 700;
+    color: #888;
+}
+.post .footer a {
+    padding: 2px 5px;
+    border-bottom: 1px solid #ef5753;
+    color: #ef5753;
+    font-size: 12px;
+}
+.post .footer a:hover {
+    background: #ef5753;
+    color: #fff;
+}
+/*
+    Post CSS --- END
+*/
+
+/*
+    Footer CSS
+*/
+.blog-footer {
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+}
+/*
+    Footer CSS --- END
+*/
+
+/*
+    Sidebar CSS
+*/
+.sidebar .heading {
+    font-weight: bold;
+    font-size: 25px;
+    color: #333;
+    border-bottom: .05rem solid #ddd;
+}
+.sidebar .post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sidebar .post .post-thumbnail {
+    flex:0 0 100px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0rem;
+    margin: 0px;
+}
+/*
+    Sidebar CSS --- END
+*/
+
+/*
+    Pagination CSS
+*/
+.pagination a.page-numbers {
+    color: #7b7979;
+    border: 1px solid #ddd;
+    padding: 0px 5px;
+    margin: 5px;
+}
+.pagination a.page-numbers:hover {
+    background-color: #ef5753;
+    color: #fff;
+}
+.pagination span.page-numbers.current {
+    background-color: #555;
+    color: #fff;
+    padding: 0px 5px;
+    margin: 5px;
+}
+/*
+    Pagination CSS --- END
+*/
+
+/*
+    Main Nav Menu CSS
+*/
+.main-nav-menu {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.main-nav-menu ul {
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+}
+.main-nav-menu ul li {
+    display: inline-block;
+    padding: 0px 10px;
+    border-bottom: 1px solid transparent;
+}
+.main-nav-menu ul li.active a {
+    background: #ef5753;
+    color: #fff;
+    padding: 0px 5px;
+}
+.main-nav-menu ul li a {
+    padding: 0px;
+}
+.main-nav-menu ul li ul.dropdown-menu {
+    transform: translate3d(10px, 30px, 0px) !important;
+}
+.main-nav-menu ul li ul.dropdown-menu li {
+    padding-bottom: 5px;
+}
+/*
+    Main Nav Menu CSS --- END
+*/
+
+/*
+    Page CSS
+*/
+.page h1 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #333;
+    border-bottom: .05rem solid #ddd;
+    padding-bottom: 8px;
+}
+.page .description p {
+    text-align: justify;
+}
+/*
+    Page CSS --- END
+*/
+
+h1.category-heading {
+    font-weight: bold;
+    font-size: 25px;
+    color: #333;
+    border-bottom: .05rem solid #ddd;
+    padding-bottom: 8px;
+}
