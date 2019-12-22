@@ -295,9 +295,6 @@ a:hover {
     border-bottom: .05rem solid #ddd;
     padding-bottom: 8px;
 }
-.page .thumbnail {
-    background-color: #333;;
-}
 .page .description p {
     text-align: justify;
 }

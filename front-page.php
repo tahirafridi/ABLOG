@@ -63,13 +63,13 @@
                 'post_type'         => 'post',
                 'posts_per_page'    => 10,
                 'paged'             => $page,
-                // 'meta_query'        => [
-                //     [
-                //         'key'       => 'is_featured_post',
-                //         'compare'   => '<',
-                //         'value'     => 1,
-                //     ]
-                // ]
+                'meta_query'        => [
+                    [
+                        'key'       => 'is_featured_post',
+                        'value'     => 1,
+                        'compare'   => 'NOT EXISTS'
+                    ]
+                ]
             ];
             
             $posts = new WP_Query($args);
