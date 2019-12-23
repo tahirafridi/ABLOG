@@ -19,7 +19,7 @@
         $featured_posts = new WP_Query($args);
         ?>
 
-        <?php if ($featured_posts->have_posts()): ?>
+        <?php if ($featured_posts->have_posts()): $featured_post_ids = []; ?>
             <?php while ($featured_posts->have_posts()): $featured_posts->the_post(); ?>
                 <div class="col-md-6 mb-4">
                     <div class="post bg-white">
@@ -44,6 +44,7 @@
                         </div>
                     </div>
                 </div>
+                <?php $featured_post_ids[] = get_the_ID(); ?>
             <?php endwhile; ?>
         <?php else: ?>
             <div class="col-md-12 mb-4">
@@ -63,16 +64,11 @@
                 'post_type'         => 'post',
                 'posts_per_page'    => 10,
                 'paged'             => $page,
-                // 'meta_query'        => [
-                //     [
-                //         'key'       => 'is_featured_post',
-                //         'compare'   => '<',
-                //         'value'     => 1,
-                //     ]
-                // ]
+                'post__not_in'      => $featured_post_ids,
             ];
             
             $posts = new WP_Query($args);
+            //echo "Last SQL-Query: {$posts->request}";exit;
             ?>
 
             <?php if ($posts->have_posts()): ?>
