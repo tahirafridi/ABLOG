@@ -116,6 +116,13 @@ a:hover {
     font-size: 1.8rem;
     font-weight: 700;
 }
+.post .description h2, .post .description h3, .post .description h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.post .description a {
+    color: #ef5753;
+}
 .post .description ul {
     padding: 0;
     margin: 0;
