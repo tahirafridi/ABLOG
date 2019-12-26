@@ -6,6 +6,7 @@
     <div class="row">
         <?php
         $args = [
+            'post_status'       => 'publish',
             'post_type'         => 'post',
             'posts_per_page'    => 2,
             'meta_query'        => [
@@ -61,6 +62,7 @@
         <div class="row">
             <?php
             $args = [
+                'post_status'       => 'publish',
                 'post_type'         => 'post',
                 'posts_per_page'    => 10,
                 'paged'             => $page,

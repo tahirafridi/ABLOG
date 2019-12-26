@@ -21,6 +21,7 @@ class WidgetRecentPosts extends WP_Widget {
         }
 
         $recent_posts = wp_get_recent_posts([
+            'post_status' => 'publish',
             'numberposts' => 5,
         ], 'OBJECT');
 
