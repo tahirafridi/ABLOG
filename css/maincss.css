@@ -22,6 +22,9 @@ a:hover {
     text-decoration: none;
     color: #ef5753;
 }
+a:focus {
+    color: #ef5753;
+}
 /*
     General CSS --- END
 */
@@ -36,6 +39,12 @@ a:hover {
 }
 .navbar-brand strong {
     color: #333;
+}
+.dropdown-menu {
+    border: none;
+}
+.dropdown-menu.show {
+    display: inline-block;
 }
 #searchform {
     z-index: 1030;

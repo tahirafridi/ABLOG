@@ -5,7 +5,8 @@
                     <div class="col-md-12">
                         <p>
                             <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a> 
-                            by <a href="https://tahirafridi.com">Tahir Afridi</a>.</p>
+                            by <a href="https://tahirafridi.com" target="_blank">Tahir Afridi</a>
+                        </p>
                         <p>
                             &copy; Copyright - <?= date('Y'); ?><br>
                             <small>Made in Pakistan 🇵🇰</small>
